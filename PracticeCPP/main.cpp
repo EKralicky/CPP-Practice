@@ -4,16 +4,12 @@
 #include "Projects/guessing_game.h"
 #include "Projects/palindrome_checker.h"
 #include "Projects/ATM.h"
-
-
-
-void search(std::string str, std::string arr[][100000])
-{
+#include "Projects/prime.h"
 
 
 int main()
 {
-    Project* project = new ATM();
+    Project* project = new Prime();
     project->run();
 
     delete project;

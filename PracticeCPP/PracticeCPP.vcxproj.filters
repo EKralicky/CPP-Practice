@@ -41,5 +41,8 @@
     <ClInclude Include="Projects\ATM.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Projects\prime.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
