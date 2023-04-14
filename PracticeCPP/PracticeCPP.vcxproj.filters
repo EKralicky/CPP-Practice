@@ -53,6 +53,9 @@
     <ClInclude Include="Projects\utility_lib\stringop.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Projects\Set 1\shopping_list.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />

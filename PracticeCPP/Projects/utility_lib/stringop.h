@@ -4,7 +4,6 @@
 #include <cctype>
 #include <chrono>
 
-
 namespace stringutil {
 	static std::string tolower_copy(const std::string& data)
 	{

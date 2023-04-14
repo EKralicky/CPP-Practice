@@ -143,6 +143,7 @@
     <ClInclude Include="Projects\Set 1\palindrome_checker.h" />
     <ClInclude Include="Projects\Set 1\prime.h" />
     <ClInclude Include="Projects\project.h" />
+    <ClInclude Include="Projects\Set 1\shopping_list.h" />
     <ClInclude Include="Projects\Set 1\temp_convert.h" />
     <ClInclude Include="Projects\utility_lib\stringop.h" />
   </ItemGroup>

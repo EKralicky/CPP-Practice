@@ -7,10 +7,11 @@
 #include "Projects/Set 1/prime.h"
 #include "Projects/Set 1/Fibonacci.h"
 #include "Projects/Set 1/grade_calculator.h"
+#include "Projects/Set 1/shopping_list.h"
 
 int main()
 {
-    Project* project = new GradeCalculator();
+    Project* project = new ShoppingList();
     project->run();
 
     delete project;
