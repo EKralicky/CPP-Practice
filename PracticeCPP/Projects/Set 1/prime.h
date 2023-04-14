@@ -1,7 +1,6 @@
 #pragma once
 #include <iostream>
-#include "Project.h"
-
+#include "../project.h"
 
 // This was hacked together in 5 mins. No input validation :)
 class Prime : public Project
@@ -12,10 +11,10 @@ public:
 	{
 		if (a < 2) return false;
 		if (a == 2) return true;
-		if (a % 2 == 0) return false;
+		if (a % 2 == 0) return false;   
 		for (int i = 3; i * i <= a; i += 2)
 		{
-			if (a % i == 0) return false;
+			if (a % i == 0) return false; 
 		}
 		return true;
 	}

@@ -1,8 +1,9 @@
 #pragma once
-#include "Project.h"
-#include "iostream"
-#include "string"
-#include "algorithm"
+#include <iostream>
+#include <string>
+#include <algorithm>
+#include "../project.h"
+
 
 class Palindrome : public Project
 {
@@ -13,7 +14,7 @@ class Palindrome : public Project
 		std::cout << "Palindrome checker\nEnter a string: ";
 		std::cin >> input;
 
-		int input_len = input.size();
+		std::size_t input_len = input.size();
 		for (int i = 0; i < input_len; i++) 
 		{
 			if (input[i] != input[(input_len - 1) - i]) 

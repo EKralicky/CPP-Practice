@@ -76,7 +76,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -91,7 +91,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -106,7 +106,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -121,7 +121,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -134,14 +134,17 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Projects\ATM.h" />
-    <ClInclude Include="Projects\calculator.h" />
-    <ClInclude Include="Projects\guessing_game.h" />
-    <ClInclude Include="Projects\hello_world.h" />
-    <ClInclude Include="Projects\palindrome_checker.h" />
-    <ClInclude Include="Projects\prime.h" />
-    <ClInclude Include="Projects\Project.h" />
-    <ClInclude Include="Projects\temp_convert.h" />
+    <ClInclude Include="Projects\Set 1\ATM.h" />
+    <ClInclude Include="Projects\Set 1\calculator.h" />
+    <ClInclude Include="Projects\Set 1\fibonacci.h" />
+    <ClInclude Include="Projects\Set 1\grade_calculator.h" />
+    <ClInclude Include="Projects\Set 1\guessing_game.h" />
+    <ClInclude Include="Projects\Set 1\hello_world.h" />
+    <ClInclude Include="Projects\Set 1\palindrome_checker.h" />
+    <ClInclude Include="Projects\Set 1\prime.h" />
+    <ClInclude Include="Projects\project.h" />
+    <ClInclude Include="Projects\Set 1\temp_convert.h" />
+    <ClInclude Include="Projects\utility_lib\stringop.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />

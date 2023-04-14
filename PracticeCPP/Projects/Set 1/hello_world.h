@@ -1,6 +1,6 @@
 #pragma once
 #include <iostream>
-#include "Project.h"
+#include "../project.h"
 
 class HelloWorld : public Project {
 

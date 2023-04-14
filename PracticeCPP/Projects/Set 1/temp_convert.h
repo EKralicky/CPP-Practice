@@ -1,8 +1,7 @@
 #pragma once
-#include "Project.h"
 #include <iostream>
 #include <cctype>
-
+#include "../project.h"
 /*
 get user conversion: c to f, or, f to c
 get number

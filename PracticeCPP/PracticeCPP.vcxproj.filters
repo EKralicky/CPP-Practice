@@ -20,28 +20,37 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Projects\hello_world.h">
+    <ClInclude Include="Projects\Set 1\hello_world.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Projects\Project.h">
+    <ClInclude Include="Projects\Set 1\calculator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Projects\calculator.h">
+    <ClInclude Include="Projects\Set 1\temp_convert.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Projects\temp_convert.h">
+    <ClInclude Include="Projects\Set 1\guessing_game.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Projects\guessing_game.h">
+    <ClInclude Include="Projects\Set 1\palindrome_checker.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Projects\palindrome_checker.h">
+    <ClInclude Include="Projects\Set 1\ATM.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Projects\ATM.h">
+    <ClInclude Include="Projects\Set 1\prime.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Projects\prime.h">
+    <ClInclude Include="Projects\Set 1\fibonacci.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Projects\Set 1\grade_calculator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Projects\project.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Projects\utility_lib\stringop.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,8 +1,9 @@
 #pragma once
-#include "Project.h"
+#include <iostream>
 #include <random>
 #include <chrono>
 #include <sstream>
+#include "../project.h"
 
 // Im goinf to start using the newline brace convention from here on 
 // also, one line ifs arent going to have braces

@@ -2,23 +2,17 @@
 Simple ATM machine:
 Design a basic ATM program that allows users to check their balance, deposit, and withdraw money.
 */
-
 #pragma once
 #include <iostream>
 #include <string>
-#include <sstream>
 #include <algorithm>
-#include "Project.h"
-
+#include <sstream>
+#include "../project.h"
 
 class ATM : public Project 
 {
 
 public:
-
-
-
-
 	char getInputAction() 
 	{
 		std::cout << ">>";
@@ -49,8 +43,6 @@ public:
 		}
 		return amount;
 	}
-
-
 
 	bool run() {
 		while (true) 

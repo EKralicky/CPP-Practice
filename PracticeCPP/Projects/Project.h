@@ -5,5 +5,4 @@ class Project {
 
 public:
 	virtual bool run() = 0;
-
 };
