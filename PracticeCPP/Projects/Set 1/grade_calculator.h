@@ -16,7 +16,7 @@ public:
 		std::string input;
 		while (std::getline(std::cin, input))
 		{
-			if (StringOP::tolower_copy(input) == "done") break;
+			if (stringutil::tolower_copy(input) == "done") break;
 	
 			std::stringstream ss(input);
 			int grade;

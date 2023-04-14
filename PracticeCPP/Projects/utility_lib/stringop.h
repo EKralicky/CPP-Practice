@@ -4,9 +4,8 @@
 #include <cctype>
 #include <chrono>
 
-class StringOP
-{
-public:
+
+namespace stringutil {
 	static std::string tolower_copy(const std::string& data)
 	{
 		std::string copy = data;
@@ -14,4 +13,4 @@ public:
 			[](unsigned char c) { return std::tolower(c); });
 		return copy;
 	}
-};
+}
