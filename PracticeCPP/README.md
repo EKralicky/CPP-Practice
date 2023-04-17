@@ -34,7 +34,7 @@
 
 ## Set 2
 
-        Reverse a string (Focus: Strings, loops)
+    Reverse a string (Focus: Strings, loops)
     Write a program that takes a string input and reverses it, displaying the reversed string to the user.
 
     Find the factorial of a number (Focus: Functions, loops, recursion)
@@ -116,13 +116,13 @@
     Compile-time expression evaluation (Focus: Templates, constexpr, metaprogramming)
     Implement a system that evaluates arithmetic expressions at compile-time using template metaprogramming and C++20 constexpr features.
 
-    Rule-based expert system (Focus: Artificial intelligence, inference engines, knowledge representation)
+    *Rule-based expert system (Focus: Artificial intelligence, inference engines, knowledge representation)
     Develop a rule-based expert system that can reason about a domain by applying a set of rules to a knowledge base and draw conclusions.
 
     Virtual machine and bytecode interpreter (Focus: Virtual machines, interpreters, bytecode)
     Implement a simple virtual machine and bytecode interpreter for a custom programming language or instruction set.
 
-    Genetic algorithm (Focus: Artificial intelligence, optimization, genetic algorithms)
+    *Genetic algorithm (Focus: Artificial intelligence, optimization, genetic algorithms)
     Design a genetic algorithm to optimize a solution to a problem, such as the traveling salesman problem or function optimization.
 
     Real-time audio processing (Focus: Audio processing, digital signal processing, real-time systems)

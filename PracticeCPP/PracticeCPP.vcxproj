@@ -145,6 +145,8 @@
     <ClInclude Include="Projects\project.h" />
     <ClInclude Include="Projects\Set 1\shopping_list.h" />
     <ClInclude Include="Projects\Set 1\temp_convert.h" />
+    <ClInclude Include="Projects\Set 2\game_of_life.h" />
+    <ClInclude Include="Projects\Set 2\reverse.h" />
     <ClInclude Include="Projects\utility_lib\stringop.h" />
   </ItemGroup>
   <ItemGroup>

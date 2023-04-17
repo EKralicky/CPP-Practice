@@ -8,12 +8,18 @@
 #include "Projects/Set 1/Fibonacci.h"
 #include "Projects/Set 1/grade_calculator.h"
 #include "Projects/Set 1/shopping_list.h"
+#include "Projects/Set 2/reverse.h"
+#include "Projects/Set 2/game_of_life.h"
+
+#include <string>
 
 int main()
 {
-    Project* project = new ShoppingList();
-    project->run();
+    /*Project* project = new ShoppingList();
+    project->run();*/
+    set2::gol_start();
 
-    delete project;
+
+    /*delete project;*/
     return 0;
 }
