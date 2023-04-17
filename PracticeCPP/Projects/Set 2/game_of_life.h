@@ -28,8 +28,8 @@ void show_console_cursor(bool showFlag)
 Counts the 8 neighbors at position x, y
 
 arr = cell array
-x/y = position to check
-d   = dimensions of the array.
+row/column = row/column to check neighbors of
+rows/columns = total number of rows & columns in the grid
 We are assuming that the length and the width are the same
 */
 typedef std::vector<std::vector<bool>> vec_grid;
