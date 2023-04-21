@@ -62,6 +62,9 @@
     <ClInclude Include="Projects\Set 2\game_of_life.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Projects\Set 2\factorial.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />
