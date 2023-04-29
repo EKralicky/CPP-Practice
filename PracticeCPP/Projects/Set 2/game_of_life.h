@@ -8,11 +8,15 @@
 #include <thread>
 #include <locale>
 #include <cwchar>
+
+#ifdef WINDOWS
 #include <windows.h>
+#endif
 
 namespace set2 {
 
 // Toggels visibility of white windows cursor in the command prompt
+#ifdef WINDOWS
 void show_console_cursor(bool showFlag)
 {
 	HANDLE out = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -23,7 +27,13 @@ void show_console_cursor(bool showFlag)
 	cursorInfo.bVisible = showFlag; // set the cursor visibility
 	SetConsoleCursorInfo(out, &cursorInfo);
 }
-
+#else
+void show_console_cursor(bool showFlag)
+{
+	std::cout << "Hidden console cursor not supported on current platform!";
+	return;
+}
+#endif
 /*
 Counts the 8 neighbors at position x, y
 
