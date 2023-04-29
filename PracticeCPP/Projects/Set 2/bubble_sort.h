@@ -3,7 +3,7 @@
 #include <iostream>
 
 namespace set2 {
-
+    // Bubble sort
     template<typename Container>
     static void bubble_sort(Container& c)
     {
