@@ -3,7 +3,7 @@
         {
             "name": "Linux",
             "includePath": [
-                "${workspaceFolder}/PracticeCPP/Projects",
+                "${workspaceFolder}/src/projects",
                 "${default}"
             ],
             "defines": [],
