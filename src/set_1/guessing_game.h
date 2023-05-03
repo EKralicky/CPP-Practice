@@ -5,8 +5,8 @@
 #include <sstream>
 #include "../project.h"
 
-// Im goinf to start using the newline brace convention from here on 
-// also, one line ifs arent going to have braces
+// Im going to start using the newline brace convention from here on 
+// also, one line ifs aren't going to have braces
 class GuessingGame : public Project 
 {
 
@@ -16,7 +16,7 @@ public:
 	*/
 	int generate_random(int low, int high) 
 	{
-		// Intialize mt with system clock as seed
+		// Initialize mt with system clock as seed
 		std::mt19937 mt{
 			static_cast<unsigned int>(std::chrono::steady_clock::now().time_since_epoch().count())
 		};
