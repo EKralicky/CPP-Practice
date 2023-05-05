@@ -64,7 +64,7 @@ public:
     }
 
     // Use the rule of 5 since this class handles memory!
-    // The rule of 5 means that if any class manages resources, it should include a destructor, copy constructor, copy assignment operator, move constructor and move assignment operator.
+    // See https://en.cppreference.com/w/cpp/language/rule_of_three for rules of 3/5/0
 
     // Copy constructor. 
     // Takes in an lvalue reference to another MoveSemantics type object
