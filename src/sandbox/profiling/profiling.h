@@ -27,7 +27,7 @@ struct SCOPED_PROFILING_TIMER {
 #define CONCAT_IMPL(x, y) x##y
 #define CONCAT(x, y) CONCAT_IMPL(x, y)
 
-// For converting ints to string with preprocessor
+// For converting ints to strings with preprocessor
 #define STR_IMPL(x) #x
 #define STR(x) STR_IMPL(x)
 

@@ -52,5 +52,16 @@
         "streambuf": "cpp",
         "thread": "cpp",
         "typeinfo": "cpp"
+    },
+    "cSpell.words": [
+        "Octree"
+    ],
+    "cSpell.customDictionaries": {
+        "custom-dictionary-workspace": {
+            "name": "custom-dictionary-workspace",
+            "path": "${workspaceFolder:CPP-Practice}/.cspell/custom-dictionary-workspace.txt",
+            "addWords": true,
+            "scope": "workspace"
+        }
     }
 }
