@@ -43,7 +43,7 @@ void test_r_value_reference() {
     int x = 7;
     r_value_reference(10);
     r_value_reference(int(5));
-    //r_value_reference(x); <-- does not work! because x is an lvalue and it cannot bind to an rvalue
+    //r_value_reference(x); <-- does not work! because x is an lvalue and it cannot bind to an rvalue reference
 }
 
 
