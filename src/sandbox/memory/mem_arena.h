@@ -24,9 +24,9 @@ public:
 
 	void *alloc_align(size_t size, size_t align) {
 		// Align 'curr_offset' forward to the specified alignment
-		uintptr_t curr_ptr = (uintptr_t)buffer + (uintptr_t)curr_offset;
+		uintptr_t curr_ptr = reinterpret_cast<uintptr_t>(buffer) + curr_offset;
 		uintptr_t offset = align_forward(curr_ptr, align);
-		offset -= (uintptr_t)buffer; // Change to relative offset
+		offset -= reinterpret_cast<uintptr_t>(buffer); // Change to relative offset
 
 		// Check to see if the backing memory has space left
 		if (offset+size <= buffer_len) {
@@ -72,7 +72,7 @@ private:
 		assert(is_power_of_two(align));
 
 		p = ptr;
-		a = (uintptr_t)align;
+		a = align;
 		// Same as (p % a) but faster as 'a' is a power of two
 		modulo = p & (a-1);
 

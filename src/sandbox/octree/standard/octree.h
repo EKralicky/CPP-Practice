@@ -6,8 +6,8 @@
 #include <cmath>
 #include "sandbox/math/vec3.h"
 #include "sandbox/math/vec4.h"
-#include "sandbox/octree/utility/morton_BMI.h"
-#include "sandbox/octree/memory/mem_arena.h"
+#include "sandbox/utility/morton_BMI.h"
+#include "sandbox/memory/mem_arena.h"
 
 namespace sandbox {
 

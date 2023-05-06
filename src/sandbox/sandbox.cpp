@@ -2,8 +2,8 @@
 #include <bitset>
 #include "octree/standard/octree.h"
 #include "profiling/profiling.h"
-#include "octree/utility/morton_BMI.h"
-#include "octree/memory/mem_arena.h"
+#include "utility/morton_BMI.h"
+#include "memory/mem_arena.h"
 
 
 int main()
