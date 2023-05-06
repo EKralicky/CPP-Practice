@@ -1,6 +1,6 @@
 #include <iostream>
 #include <bitset>
-#include "octree/standard/octree.h"
+#include "octree/octree.h"
 #include "profiling/profiling.h"
 #include "utility/morton_BMI.h"
 #include "memory/mem_arena.h"
