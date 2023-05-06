@@ -3,6 +3,7 @@
 #include <iostream>
 #include <typeinfo>
 #include <algorithm>
+#include <iomanip>
 #include "chrono_names.h"
 
 using time_point = std::chrono::high_resolution_clock::time_point ;
@@ -18,7 +19,8 @@ struct SCOPED_PROFILING_TIMER {
     }
     ~SCOPED_PROFILING_TIMER() {
         m_end_time = std::chrono::high_resolution_clock::now();
-        auto runtime = std::chrono::duration_cast<T>(m_end_time - m_start_time).count();
+        double runtime = std::chrono::duration_cast<T>(m_end_time - m_start_time).count();
+        std::cout << std::fixed << std::setprecision(1); // Set decimal precision
         std::cout << "Timer [" << m_name << "] ran for " << runtime << " " << duration_type_string<T>() << "\n";
     }
 };
