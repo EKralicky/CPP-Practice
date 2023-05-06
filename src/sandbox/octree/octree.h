@@ -39,17 +39,17 @@ public:
         OctreeNode* trackingBranch = m_root.get();
         for (int i = m_treeDepth; i > 0; i--) {
             uint32_t octLocation = (morton >> (3 * i)) & 0b111;
-            if (trackingBranch->children[octLocation] == nullptr) {
+            if (trackingBranch->children[octLocation] == nullptr) { // Create new branch if it doesn't exist
                 // This heap allocation takes the most time here: ~0.003 ms which equates to 200ms for 200k insertions. 
                 // What we want to do is pass in a custom arena allocator into the octree class so we can get faster and controlled allocations.
-                // this line: new (m_allocator.alloc(sizeof(OctreeNode))) OctreeNode(), constructs a new octree node at the memory address we allocated in the arena:
-                // m_allocator.alloc(sizeof(OctreeNode)).
-                void* mem = m_allocator.alloc(sizeof(OctreeNode));
-                // if (mem == nullptr) {
-                //     std::cerr << "Arena allocator ran out of memory\n";
-                //     return;
-                // }
-                trackingBranch->children[octLocation].reset(new (mem) OctreeNode()); // Create new branch if it doesn't exist
+                // this line: new (mem) OctreeNode(), constructs a new octree node at the memory address we allocated here:
+                void* mem = m_allocator.alloc(sizeof(OctreeNode)); // Allocate new memory block of size 'OctreeNode' and return the pointer to that block
+
+                if (mem == nullptr) {
+                    std::cerr << "Arena allocator ran out of memory\n";
+                    return;
+                }
+                trackingBranch->children[octLocation].reset(new (mem) OctreeNode()); // Construct new node at child location using the memory address we allocated in the arena
             }
             trackingBranch = trackingBranch->children[octLocation].get(); // Update the tracking branch to point to the next level branch as specified by index
         }
