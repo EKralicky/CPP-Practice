@@ -13,8 +13,8 @@
                 "--std=c++20",
                 "--include-directory=${workspaceFolder}\\src",
                 "-mbmi2",
-                "-O3"
-                
+                "-O3",
+                "-fno-tree-dce"
             ],
             "options": {
                 "cwd": "${fileDirname}"

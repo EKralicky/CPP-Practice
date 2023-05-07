@@ -6,9 +6,13 @@
 #include <memory>
 #include <cstring>
 #include <algorithm>
+#include <sstream>
+
+// Implementation based on 
+// https://www.gingerbill.org/article/2019/02/08/memory-allocation-strategies-002/
 
 #ifndef DEFAULT_ALIGNMENT
-#define DEFAULT_ALIGNMENT (2*sizeof(void *))
+#define DEFAULT_ALIGNMENT (2 * sizeof(void*))
 #endif
 
 class ArenaAllocator
@@ -29,10 +33,10 @@ public:
 		offset -= reinterpret_cast<uintptr_t>(buffer); // Change to relative offset
 
 		// Check to see if the backing memory has space left
-		if (offset+size <= buffer_len) {
-			void *ptr = &buffer[offset];
+		if (offset + size <= buffer_len) {
+			void* ptr = &buffer[offset];
 			prev_offset = offset;
-			curr_offset = offset+size;
+			curr_offset = offset + size;
 
 			// Zero new memory by default
 			std::memset(ptr, 0, size);
@@ -46,13 +50,25 @@ public:
 		return alloc_align(size, DEFAULT_ALIGNMENT);
 	}
 
-	void free(void *ptr) {
+	void free(void* ptr) {
 		// Do nothing
 	}
 
 	void free_all() {
 		curr_offset = 0;
 		prev_offset = 0;
+	}
+
+	size_t mem_used() const {
+		return curr_offset;
+	}
+
+	size_t mem_available() const {
+		return buffer_len - curr_offset;
+	}
+
+	size_t mem_total() const {
+		return buffer_len;
 	}
 
 private:
@@ -63,7 +79,7 @@ private:
 
 
 	bool is_power_of_two(uintptr_t x) {
-		return (x & (x-1)) == 0;
+		return (x & (x - 1)) == 0;
 	}
 
 	uintptr_t align_forward(uintptr_t ptr, size_t align) {
@@ -74,7 +90,7 @@ private:
 		p = ptr;
 		a = align;
 		// Same as (p % a) but faster as 'a' is a power of two
-		modulo = p & (a-1);
+		modulo = p & (a - 1);
 
 		if (modulo != 0) {
 			// If 'p' address is not aligned, push the address to the
@@ -83,5 +99,25 @@ private:
 		}
 		return p;
 	}
+};
 
+
+// For handling out of mem errors
+class AllocatorOutOfMemoryError : public std::runtime_error {
+public:
+    AllocatorOutOfMemoryError(const ArenaAllocator& allocator)
+        : std::runtime_error(create_error_message(allocator)),
+          m_allocator(allocator) {}
+
+private:
+    const ArenaAllocator& m_allocator;
+
+    static std::string create_error_message(const ArenaAllocator& allocator) {
+        std::ostringstream oss;
+        oss << "Allocator out of memory! "
+			<< "[Bytes allocated: " << allocator.mem_total() << "] "
+			<< "[Bytes used: " << allocator.mem_used() << "] "
+            << "[Bytes available: " << allocator.mem_available() << "]";
+        return oss.str();
+    }
 };
